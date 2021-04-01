@@ -8,6 +8,6 @@ admin.initializeApp({
   });
 
 const db = admin.firestore()
-
+db.settings({ ignoreUndefinedProperties: true })
 module.exports.guilds = db.collection('guilds')
 module.exports = db
